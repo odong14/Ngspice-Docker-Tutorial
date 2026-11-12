@@ -1,0 +1,19 @@
+* Lib
+.lib ./sky130/sky130/libs.tech/ngspice/sky130.lib.spice tt
+
+VDD vdd 0 DC 1.8
+Vgate vin 0 PULSE(0 1.8 0p 100p 100p 1n 2n)
+
+*    S   G   D    B
+Xp1 vdd vin vout vdd sky130_fd_pr__pfet_01v8 L=1 W=1
+Xn1 gnd vin vout gnd sky130_fd_pr__nfet_01v8 L=1 W=1
+
+.tran 1ps 10ns 0 10p
+
+.control
+    run
+    set hcopydevtype = svg
+    hardcopy plot.svg vin vout
+.endc
+
+.end
