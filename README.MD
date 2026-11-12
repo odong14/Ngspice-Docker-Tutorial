@@ -15,8 +15,8 @@ Open Docker Desktop and wait until it is running.
 Open a terminal and clone the repository. Replace the placeholders with the repository URL and folder name:
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/odong14/Ngspice-Docker-Tutorial
+cd Ngspice-Docker-Tutorial
 ```
 
 Run the following commands from the repository folder that contains the `Dockerfile`.
